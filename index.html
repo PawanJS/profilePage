@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Profile Page</title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <a href="#0" class="header__logo">SparkX</a>
+      <a href="#0" class="header__link">
+        <svg class="header__icon header__icon--back">
+          <use xlink:href="img/sprite.svg#left-arrow"></use>
+        </svg>
+        back to people
+      </a>
+      <div class="header__search">
+        <svg class="header__search--icon">
+          <use xlink:href="img/sprite.svg#loupe"></use>
+        </svg>
+        <input type="search" placeholder="Search" class="header__search--bar" />
+      </div>
+      <button class="header__notification">
+        <svg class="header__icon">
+          <use xlink:href="img/sprite.svg#notification-bell"></use>
+        </svg>
+      </button>
+    </header>
+    <input type="checkbox" name="" id="navi-toggle" class="menu__checkbox" />
+    <label for="navi-toggle" class="menu--button">
+      <span class="menu--icon"></span>
+    </label>
+    <section class="sidebar">
+      <div class="sidebar__profile">
+        <figure class="sidebar__item">
+          <img src="img/person1.jpg" alt="Peter" class="sidebar__img" />
+        </figure>
+        <h2 class="heading-2">
+          Peter Williams
+          <span class="paragraph sidebar__location">London</span>
+        </h2>
+        <div class="sidebar__person-stats">
+          <button class="sidebar__person--post">
+            <h2 class="heading-2">758</h2>
+            <p class="paragraph">Post</p>
+          </button>
+          <button class="sidebar__person--followers open-button">
+            <h2 class="heading-2">254k</h2>
+            <p class="paragraph">Followers</p>
+          </button>
+          <!-- * followers popup -->
+          <div class="followers__container modal" id="id01">
+            <div class="followers__header">
+              <h3 class="heading-2">Followers</h3>
+              <button class="close-button followers__btn">&times;</button>
+            </div>
+            <div class="followers__body">
+              <figure class="followers__body--item">
+                <img
+                  src="img/person1.jpg"
+                  alt="Person"
+                  class="followers__body--img"
+                />
+              </figure>
+              <a href="#0" class="followers__body--person">
+                <h4 class="heading-4">Liza</h4>
+                <span class="paragraph sidebar__location">username</span>
+              </a>
+              <button class="sidebar__person--followers modal__btn">
+                Follow
+              </button>
+            </div>
+          </div>
+          <div id="overlay"></div>
+          <button class="sidebar__person--following open-button">
+            <h2 class="heading-2">245</h2>
+            <p class="paragraph">Following</p>
+          </button>
+          <!-- * following popup -->
+          <div class="following__container modal">
+            <div class="following__header">
+              <h3 class="heading-2">Following</h3>
+              <button class="close-button following__btn">&times;</button>
+            </div>
+            <div class="following__body">
+              <figure class="following__body--item">
+                <img
+                  src="img/person1.jpg"
+                  alt="Person"
+                  class="following__body--img"
+                />
+              </figure>
+              <a href="#0" class="following__body--person">
+                <h4 class="heading-4">Liza</h4>
+              </a>
+              <button class="sidebar__person--followers modal__btn">
+                Follow
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#0" class="nav__link">
+              <svg class="nav__icon">
+                <use xlink:href="img/sprite.svg#home"></use>
+              </svg>
+              Feed
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#0" class="nav__link">
+              <svg class="nav__icon">
+                <use xlink:href="img/sprite.svg#loupe"></use>
+              </svg>
+              Explore
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#0" class="nav__link">
+              <svg class="nav__icon">
+                <use
+                  xlink:href="img/sprite.svg#notification-bell
+                 "
+                ></use>
+              </svg>
+              Notification
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#0" class="nav__link">
+              <svg class="nav__icon">
+                <use xlink:href="img/sprite.svg#speech-bubble"></use>
+              </svg>
+              Message
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#0" class="nav__link">
+              <svg class="nav__icon">
+                <use xlink:href="img/sprite.svg#bar-chart"></use>
+              </svg>
+              Stats
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar__additional-items">
+        <a href="#0" class="sidebar__link">
+          <svg class="sidebar__icon">
+            <use xlink:href="img/sprite.svg#settings"></use>
+          </svg>
+        </a>
+        <a href="#0" class="sidebar__link">
+          <svg class="sidebar__icon">
+            <use xlink:href="img/sprite.svg#group"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+    <section class="profile">
+      <figure class="profile__item">
+        <img src="img/person1.jpg" alt="Peter" class="profile__img" />
+      </figure>
+      <div class="profile__name">
+        <h1 class="heading-1">
+          Peter Williams
+          <svg class="profile__icon">
+            <use xlink:href="img/sprite.svg#check"></use>
+          </svg>
+        </h1>
+      </div>
+      <div class="profile__about">
+        <p class="paragraph">
+          Hello, I am a beginner Front-End Web Developer. I love to make new
+          websites and always excited about new technologies. As a learning and
+          growing Web Developer with former experience in design, I aim to bring
+          the best of both worlds by providing effective, functional, and
+          meaningful Websites.
+        </p>
+      </div>
+      <div class="profile__description">
+        <div class="profile__description--tag">
+          <h3 class="heading-3 mb-sm">Favorite Tags</h3>
+          <p class="paragraph">HTML , CSS , SASS</p>
+        </div>
+        <div class="profile__description--activity">
+          <h3 class="heading-3 mb-sm mt-sm">Activity</h3>
+          <p class="paragraph">Learning JAVASCRIPT</p>
+        </div>
+        <div class="profile__description--location">
+          <h3 class="heading-3 mb-sm mt-sm">Location</h3>
+          <p class="paragraph">London</p>
+        </div>
+      </div>
+      <div class="profile__suggestion">
+        <h3 class="heading-3 mb-sm">Favorite Profiles</h3>
+
+        <div class="profile__suggestion--container">
+          <figure class="profile__suggestion--item">
+            <a href="#0" class="profile__suggestion--link">
+              <img
+                src="img/favPerson1.webp"
+                alt="person1"
+                class="profile__suggestion--img"
+              />
+            </a>
+          </figure>
+          <figure class="profile__suggestion--item">
+            <a href="#0" class="profile__suggestion--link">
+              <img
+                src="img/favPerson2.webp"
+                alt="person2"
+                class="profile__suggestion--img"
+              />
+            </a>
+          </figure>
+          <figure class="profile__suggestion--item">
+            <a href="#0" class="profile__suggestion--link">
+              <img
+                src="img/favPerson3.webp"
+                alt="person3"
+                class="profile__suggestion--img"
+              />
+            </a>
+          </figure>
+          <figure class="profile__suggestion--item">
+            <a href="#0" class="profile__suggestion--link">
+              <img
+                src="img/favPerson4.webp"
+                alt="person4"
+                class="profile__suggestion--img"
+              />
+            </a>
+          </figure>
+          <figure class="profile__suggestion--item">
+            <a href="#0" class="profile__suggestion--link">
+              <img
+                src="img/favPerson5.webp"
+                alt="person5"
+                class="profile__suggestion--img"
+              />
+              <span>+45</span>
+            </a>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery__stories">
+        <h2 class="heading-2 mb-md">Featured Stories</h2>
+        <div class="gallery__stories--container">
+          <figure class="gallery__stories--item">
+            <a href="#0" class="gallery__stories--link">
+              <img
+                src="img/story1.webp"
+                alt="Stories"
+                class="gallery__stories--img"
+              />
+            </a>
+            <figcaption class="paragraph">Short Mess</figcaption>
+          </figure>
+          <figure class="gallery__stories--item">
+            <a href="#0" class="gallery__stories--link">
+              <img
+                src="img/story2.webp"
+                alt="Stories"
+                class="gallery__stories--img"
+            /></a>
+            <figcaption class="paragraph">Summers</figcaption>
+          </figure>
+          <figure class="gallery__stories--item">
+            <a href="#0" class="gallery__stories--link">
+              <img
+                src="img/story3.webp"
+                alt="Stories"
+                class="gallery__stories--img"
+              />
+            </a>
+            <figcaption class="paragraph">Nature love</figcaption>
+          </figure>
+          <figure class="gallery__stories--item">
+            <a href="#0" class="gallery__stories--link">
+              <img
+                src="img/story4.webp"
+                alt="Stories"
+                class="gallery__stories--img"
+            /></a>
+            <figcaption class="paragraph">Couple Goal</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="gallery__images">
+        <h2 class="heading-2 mb-md">Photo Feed</h2>
+        <div class="gallery__images--container">
+          <figure class="gallery__item">
+            <a href="#0" class="gallery__images--link">
+              <img
+                src="img/feed1.webp"
+                alt="Images of user"
+                class="gallery__img"
+            /></a>
+          </figure>
+          <figure class="gallery__item">
+            <a href="#0" class="gallery__images--link">
+              <img
+                src="img/feed2.webp"
+                alt="Images of user"
+                class="gallery__img"
+              />
+            </a>
+          </figure>
+          <figure class="gallery__item">
+            <a href="#0" class="gallery__images--link">
+              <img
+                src="img/feed3.webp"
+                alt="Images of user"
+                class="gallery__img"
+              />
+            </a>
+          </figure>
+          <figure class="gallery__item">
+            <a href="#0" class="gallery__images--link">
+              <img
+                src="img/feed4.webp"
+                alt="Images of user"
+                class="gallery__img"
+              />
+            </a>
+          </figure>
+          <figure class="gallery__item">
+            <a href="#0" class="gallery__images--link">
+              <img
+                src="img/feed5.webp"
+                alt="Images of user"
+                class="gallery__img"
+              />
+            </a>
+          </figure>
+          <figure class="gallery__item">
+            <a href="#0" class="gallery__images--link">
+              <img
+                src="img/feed6.webp"
+                alt="Images of user"
+                class="gallery__img"
+              />
+            </a>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>

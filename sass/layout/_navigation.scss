@@ -1,0 +1,23 @@
+.nav {
+  &__icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    fill: $color-grey-light;
+    margin-right: 1rem;
+  }
+
+  &__item {
+    padding: 1rem 0;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: $color-dark;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-grey-light;
+    }
+  }
+}
